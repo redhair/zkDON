@@ -4,6 +4,8 @@ Author: Thomas Bonanni
 
 This is a Proof of Concept for a Zero-Knowledge Decentralized Oracle Network.
 
+OCR Implementation based on [Chainlink Off-chain Reporting Protocol](https://research.chain.link/ocr.pdf?_ga=2.57196899.818463399.1660055777-521613243.1660055777)
+
 ## Premise
 
 Modern Oracles suffer from a plethora of security flaws. Some driven by Oracle architechture itself, but others driven by underlying blokcchain implementation. The goal of our zkDON is to achieve the following properties:
