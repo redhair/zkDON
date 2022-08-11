@@ -1,3 +1,3 @@
-import { Add } from './Add.js';
-
-export { Add };
+export { Oracle } from './Oracle.js';
+export { OCRAggregator } from './OCRAggregator';
+export { default as Aggregator } from './Aggregator';

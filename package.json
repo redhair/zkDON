@@ -14,24 +14,26 @@
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
   "scripts": {
+    "dev": "ts-node-esm src/OracleClient.ts",
     "build": "tsc -p tsconfig.json",
     "coverage": "node --experimental-vm-modules --experimental-wasm-modules --experimental-wasm-threads node_modules/.bin/jest --coverage",
     "format": "prettier --write --ignore-unknown **/*",
     "prepare": "husky install",
     "test": "node --experimental-vm-modules --experimental-wasm-modules --experimental-wasm-threads node_modules/.bin/jest",
-    "testw": "node --experimental-vm-modules --experimental-wasm-modules --experimental-wasm-threads node_modules/.bin/jest --watch",
+    "testw": "node --experimental-vm-modules --experimental-wasm-modules --experimental-wasm-threads node_modules/.bin/jest --watch --verbose",
     "lint": "npx eslint src/* --fix"
   },
   "lint-staged": {
-    "**/*": [
-      "eslint src/* --fix",
-      "prettier --write --ignore-unknown"
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --print-width 80 --single-quote --write"
     ]
   },
   "devDependencies": {
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-typescript": "^7.16.0",
-    "@types/jest": "^27.0.3",
+    "@types/jest": "^27.5.2",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.7.1",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
     "eslint": "^8.7.0",
@@ -41,9 +43,14 @@
     "lint-staged": "^11.0.1",
     "prettier": "^2.3.2",
     "ts-jest": "^27.0.7",
+    "ts-node": "^10.9.1",
     "typescript": "^4.7.2"
   },
   "peerDependencies": {
     "snarkyjs": "^0.4.4"
+  },
+  "dependencies": {
+    "net": "^1.0.2",
+    "uuidv4": "^6.2.13"
   }
 }
