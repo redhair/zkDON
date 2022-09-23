@@ -8,7 +8,7 @@ OCR Implementation based on [Chainlink Off-chain Reporting Protocol](https://res
 
 ## Premise
 
-Modern Oracles suffer from a plethora of security flaws. Some driven by Oracle architechture itself, but others driven by underlying blokcchain implementation. The goal of our zkDON is to achieve the following properties:
+Modern Oracles suffer from a plethora of security flaws. Some driven by Oracle architechture itself, but others driven by underlying blockchain implementation. The goal of our zkDON is to achieve the following properties:
 
 1. MEV Resistant - Oracles that publish updates on Ethereum are subject to back-running attacks, where an adverasary will position a liquidation transaction in the mempool immediately after the oracle update transaction, thus instantly liquidating a vault without contest. We want our Oracle Network to be resistant to these types of attacks.
 
